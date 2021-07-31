@@ -18,6 +18,10 @@ namespace MvcPelicula
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+            routes.MapRoute(
+                name: "Hola",
+                url: "{controller}/{action}/{nombre}/{id}"
+            );
         }
     }
 }
