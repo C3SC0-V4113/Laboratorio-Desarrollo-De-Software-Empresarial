@@ -10,12 +10,14 @@
     @Html.ActionLink("Crear Nuevo", "Create")
     @using (Html.BeginForm("Index","Peliculas",FormMethod.Get))
     {
-        <p>
-            Genre: @Html.DropDownList("generoPelicula", "All")
-            Titulo: @Html.TextBox("BuscarString")  
-            <br />
-            <input type="submit" value="Filtrar" />
-        </p>
+<p>
+    Genre: @Html.DropDownList("generoPelicula", "All")
+    Titulo: @Html.TextBox("BuscarString")
+    Precio Máximo: @Html.TextBox("precioMax")
+    Precio Mínimo: @Html.TextBox("precioMin")
+    <br />
+    <input type="submit" value="Filtrar" />
+</p>
     }
 </p>
 <table class="table">
