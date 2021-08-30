@@ -15,9 +15,19 @@ namespace Persona.Controllers
         private PersonaDBContext db = new PersonaDBContext();
 
         // GET: Personas
-        public ActionResult Index()
+        public ActionResult Index(string buscarNombre,string buscarDUI)
         {
-            return View(db.Personas.ToList());
+            var personas = from p in db.Personas
+                           select p;
+            if (!String.IsNullOrEmpty(buscarNombre))
+            {
+                personas = personas.Where(s => s.Nombre.Contains(buscarNombre)||s.Apellido.Contains(buscarNombre));
+            }
+            if (!String.IsNullOrEmpty(buscarDUI))
+            {
+                personas = personas.Where(x => x.DUI.ToString().Contains(buscarDUI));
+            }
+            return View(personas);
         }
 
         // GET: Personas/Details/5

@@ -8,6 +8,15 @@
 
 <p>
     @Html.ActionLink("Crear Nuevo", "Create")
+    @using (Html.BeginForm("Index", "Personas", FormMethod.Get))
+    {
+        <p>
+            DUI: @Html.TextBox("buscarDUI")
+            Nombre: @Html.TextBox("buscarNombre")
+            <br/>
+            <input type="submit" value="Filtrar"/>
+        </p>
+    }
 </p>
 <table class="table">
     <tr>
