@@ -1,36 +1,43 @@
 package datos;
 
 public class contacto {
-	//Variables
+	// Variables
 	private String nombre;
 	private long celular;
+
 	////////////////
-	//Constructores
+	// Constructores
 	public contacto(String nombre, long celular) {
 		super();
 		this.nombre = nombre;
 		this.celular = celular;
 	}
+
 	public contacto() {
 		super();
 	}
+
 	///////////////////
-	/*ToString*/
+	/* ToString */
 	@Override
 	public String toString() {
 		return "contacto [nombre=" + nombre + ", celular=" + celular + "]";
 	}
+
 	/////////////////////
-	/*Getters y Setters*/
+	/* Getters y Setters */
 	public String getNombre() {
 		return nombre;
 	}
+
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
+
 	public long getCelular() {
 		return celular;
 	}
+
 	public void setCelular(long celular) {
 		this.celular = celular;
 	}
